@@ -20,6 +20,21 @@ public class LoginStepDef {
             driver.findElement(By.id("com.glowie.staging:id/txtHaveAnAccount")).click();
     }
 
+    @When("^I click login with different account$")
+    public void iClickLoginWithDifferentAccount() {
+        driver.findElement(By.id("com.glowie.staging:id/btnSignUpFaceBook")).click();
+    }
+
+    @And("^I select a Facebook Account$")
+    public void iSelectAFacebookAccount() {
+        driver.findElement(By.id("com.facebook.katana:id/(name removed)")).click();
+    }
+
+    @And("^Saved account seletion$")
+    public void savedAccountSeletion() {
+        driver.findElement(By.id("com.glowie.staging:id/btnSave")).click();
+    }
+
     @And("^I input username as \"([^\"]*)\"$")
     public void iInputUsernameAs(String username) throws Throwable {
         driver.findElement(By.id("com.glowie.staging:id/edPhoneNumber")).clear();
@@ -39,10 +54,15 @@ public class LoginStepDef {
         driver.findElement(By.id("com.glowie.staging:id/btnLogin")).click();
     }
 
-    @And("^Handle save account$")
+    @And("^Unsaved account seletion$")
     public void handleSaveAccount() throws InterruptedException {
         driver.findElement(By.id("com.glowie.staging:id/btnNotSave")).click();
         Thread.sleep(5000);
+    }
+
+    @And("^I click login via Facebook account$")
+    public void iClickLoginViaFacebookAccount() {
+        driver.findElement(By.id("com.glowie.staging:id/loginWithFacebookTextView")).click();
     }
 
     @Then("^The home page is open$")
@@ -50,10 +70,12 @@ public class LoginStepDef {
         Assert.assertTrue(driver.findElement(By.id("com.glowie.staging:id/tvTabContest")).isDisplayed());
     }
 
-
     @Then("^The error message \"([^\"]*)\" is displayed$")
     public void theErrorMessageIsDisplayed(String error) throws Throwable {
         driver.findElement(By.id("com.glowie.staging:id/tvDes")).isDisplayed();
         driver.findElement(By.id("com.glowie.staging:id/btnConfirm")).click();
     }
+
+
+
 }

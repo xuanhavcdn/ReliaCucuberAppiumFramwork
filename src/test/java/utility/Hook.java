@@ -36,7 +36,7 @@ public class Hook {
 	{
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "G3416");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "INE LX2");
 		caps.setCapability("appPackage", "com.glowie.staging");
 		caps.setCapability("appActivity","com.glowie.app.ui.feature.splashscreen.view.SplashScreenActivity");
 		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
