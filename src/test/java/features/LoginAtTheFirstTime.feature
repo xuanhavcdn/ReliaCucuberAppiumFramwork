@@ -81,13 +81,13 @@ Feature: Login
       | username   | password |
       | 0988903450 | test1234 |
 
-  @appium
-  Scenario: Login successfully via Facebook account - account 1
-    Given I open the application
-    When I click txtHaveAnAccount
-    And I click login via Facebook account
-    And I select a Facebook Account
-    Then The home page is open
+#  @appium
+#  Scenario: Login successfully via Facebook account - account 1
+#    Given I open the application
+#    When I click txtHaveAnAccount
+#    And I click login via Facebook account
+#    And I select a Facebook Account
+#    Then The home page is open
 
 
 
