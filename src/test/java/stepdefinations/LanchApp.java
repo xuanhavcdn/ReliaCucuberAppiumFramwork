@@ -1,5 +1,6 @@
 package stepdefinations;
 
+import cucumber.api.PendingException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -21,6 +22,4 @@ private WebDriver driver;
 	public void i_open_the_application() throws Throwable {
 	    Assert.assertTrue(driver.findElement(By.id("com.glowie.staging:id/txtHaveAnAccount")).isDisplayed());
 	}
-
-
 }

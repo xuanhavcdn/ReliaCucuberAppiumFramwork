@@ -36,9 +36,9 @@ public class Hook {
 	{
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "INE LX2");
-		caps.setCapability("appPackage", "com.glowie.staging");
-		caps.setCapability("appActivity","com.glowie.app.ui.feature.splashscreen.view.SplashScreenActivity");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "SM-A507FN");
+		caps.setCapability("appPackage", "com.northgate.haplo.dev");
+		caps.setCapability("appActivity","com.northgate.haplo.view.ui.activity.MainActivity");
 		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
