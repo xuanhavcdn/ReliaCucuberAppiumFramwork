@@ -2,7 +2,6 @@ Feature: Login611
 
   @appium
   Scenario Outline: Login successfully with valid username and password - account 1 - unsaved selection
-    Given I open the application
     When I click next button
     And I click skip intro
     And I input email "<email>"
@@ -10,5 +9,5 @@ Feature: Login611
     And I click loginH button
 
     Examples:
-      |  email | password |
+      | email               | password |
       | hnhaplo+1@gmail.com | 12345678 |
